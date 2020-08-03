@@ -1,0 +1,26 @@
+{
+    "name": "azonmedia/vue-component-hooks",
+    "type": "library",
+    "description": "Create and dump Vue components for hooks",
+    "keywords": ["vue router"],
+    "homepage": "https://github.com/AzonMedia/module-vue-component-hooks",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Vesko Kenashkov",
+            "email": "kenashkov@azonmedia.com",
+            "homepage": "http://azonmedia.com",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "azonmedia/components": "dev-master",
+        "php": ">=7.2.0",
+        "azonmedia/utilities": "dev-master"
+    },
+    "autoload": {
+        "psr-4": {
+            "Azonmedia\\VueComponentHooks\\": "src/"
+        }
+    }
+}
