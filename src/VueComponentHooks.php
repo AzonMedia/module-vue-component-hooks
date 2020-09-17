@@ -49,6 +49,13 @@ class VueComponentHooks
     private array $hooks = [];
 
     /**
+     * Are the hooks dumped.
+     * @see self::are_hooks_dumped()
+     * @var bool
+     */
+    private bool $hooks_dumped_flag = false;
+
+    /**
      * VueComponentHooks constructor.
      * @param string $component_hooks_dir The directory where the hooks should be dumped
      * @param string $aliases_file Path to json file containing aliases used by webpack
@@ -266,6 +273,24 @@ class VueComponentHooks
                 $this->dump_hook($component_name, $hook_name, $hooked_components);
             }
         }
+
+        $this->set_hooks_dumped(true);
+    }
+
+    /**
+     * @param bool $flag
+     */
+    public function set_hooks_dumped(bool $flag): void
+    {
+        $this->hooks_dumped_flag = $flag;
+    }
+
+    /**
+     * @return bool
+     */
+    public function are_hooks_dumpod(): bool
+    {
+        return $this->hooks_dumped_flag;
     }
 
     /**
